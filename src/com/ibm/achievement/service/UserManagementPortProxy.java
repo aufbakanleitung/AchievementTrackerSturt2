@@ -117,6 +117,7 @@ public class UserManagementPortProxy{
     }
 
     public EmployeeVO isValidUser(String emailId, String password) throws AchievementTrackerException_Exception {
+    	
         return _getDescriptor().getProxy().isValidUser(emailId,password);
     }
 
