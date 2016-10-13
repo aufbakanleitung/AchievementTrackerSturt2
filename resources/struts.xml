@@ -59,10 +59,11 @@
 			<result name="input">login.jsp</result>
 		</action>
 		
-		<!--  <action name="register" method="execute" class="org.ibm.achievementTracker.Action.RegisterAction">
+		<!-- This action was commented out -->
+		<action name="register" method="execute" class="org.ibm.achievementTracker.Action.RegisterAction">
 			<result name="success">registerUser.jsp</result>
 			<result name="error">error.jsp</result>
-		</action>-->
+		</action>
 		
 		<action name="lookup" method="execute" class="org.ibm.achievementTracker.Action.LookUpAction">
 			<result name="success">lookUp.jsp</result>
@@ -74,14 +75,17 @@
 			<result name="error">error.jsp</result>
 		</action>
 		
-		<!-- <action name="register"> 
+		<!-- This was commented out -->
+		<action name="register"> 
          <result>registerUser.jsp</result>
-      	</action> -->
+      	</action>
 		
 		<action name="register"  class="org.ibm.achievementTracker.Action.RegisterAction">
-            <!-- <interceptor-ref name="defaultStack">
+		
+		<!-- This was commented out  -->
+            <interceptor-ref name="defaultStack">
             <param name="validation.excludeMethods">loadRegisterForm</param>
-            </interceptor-ref> -->
+            </interceptor-ref>
             
             <interceptor-ref name="validation">
                 <param name="excludeMethods">input</param>
@@ -89,16 +93,20 @@
             <result name="success">/registerUser.jsp</result>
             <result name="input">registerUser.jsp</result>	
         </action>
+        <!-- Up to here -->
 		
-		<!--  <action name="register" method="loadRegisterForm" class="org.ibm.achievementTracker.Action.RegisterAction">			
+		<!-- This was commented out from here -->
+		<action name="register" method="loadRegisterForm" class="org.ibm.achievementTracker.Action.RegisterAction">			
 			<result name="registerForm">registerUser.jsp</result>		 
 			<result name="error">error.jsp</result>
-		</action> -->
+		</action>
 		
-		<!-- <action name="register" method="loadRegisterForm" class="org.ibm.achievementTracker.Action.RegisterAction">			
+		<action name="register" method="loadRegisterForm" class="org.ibm.achievementTracker.Action.RegisterAction">			
 			<result name="registerForm">registerUser.jsp</result>		 
 			<result name="error">error.jsp</result>
-		</action> -->
+		</action>
+		
+		<!-- Until here -->
 		
 		<action name="enterAchievement" method="init" class="org.ibm.achievementTracker.Action.EnterAchievementAction">
 			<!-- <result name="input">registerUser.jsp</result>	 -->
@@ -123,8 +131,9 @@
 		<action name="registerUser" method="doRegister" class="org.ibm.achievementTracker.Action.RegisterAction">
 			<result name="input">registerUser.jsp</result>	
 			<result name="success">login.jsp</result>
-			<!-- <result name="error">error.jsp</result> -->
+			<!-- This was commented out --> <result name="error">error.jsp</result> 
 		</action>
+		
 		<action name="listachievementsself" method="init" class="org.ibm.achievementTracker.Action.ListAchievementsSelfAction">
 			<result name="success" type="tiles">listachievementsself</result>
 			<result name="error">login.jsp</result>
