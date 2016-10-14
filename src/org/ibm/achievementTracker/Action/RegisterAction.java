@@ -36,13 +36,15 @@ public class RegisterAction extends ActionSupport implements Preparable{
 	@Override
     public String execute(){
 		//loadProjects();
-		System.out.println(emailAddress + " " + password + " " + confirmPassword + " " + firstName + " " + lastName + " " + employeeId + " " + peopleManager + " " + submitted );
+		System.out.println(emailAddress + " " + password + " " + confirmPassword + " " + firstName + " " + 
+		lastName + " " + employeeId + " " + peopleManager + " " + submitted );
         return SUCCESS;
     }
      
 	
 	public String loadRegisterForm() {
-		System.out.println(emailAddress + " " + password + " " + confirmPassword + " " + firstName + " " + lastName + " " + employeeId + " " + peopleManager + " " +submitted);
+		System.out.println(emailAddress + " " + password + " " + confirmPassword + " " + firstName + " " + 
+		lastName + " " + employeeId + " " + peopleManager + " " +submitted);
 		return SUCCESS;
 		//return "registerForm";
 	}
